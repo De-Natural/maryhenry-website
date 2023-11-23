@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(3, 4, 192, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 8px;
+}
+ul{
+    list-style-position: inside;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+nav li a{
+    text-decoration: none;
+    cursor: pointer;
+}
+nav li a:hover{
+    background-color: palegreen;
+    color: white;
+    padding: 10px;
+}
+nav h2{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 8px 6px 4px darkkhaki;
+}
+/* #backward{
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    cursor: pointer;
+    z-index: -2;
+}
+#backward:hover{
+    background-color: lightblue;
+}
+#forword{
+    position: absolute;
+    top: 30%;
+    right: 80%;
+    cursor: pointer;
+    z-index: -2;
+}
+#forword:hover{
+    background-color: lightblue;
+} */
+body{
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+}
+.top{
+    height: 500px;
+    width: 100%;
+    background-color: orangered;
+    position: relative;
+}
+.top img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    filter: brightness(0.8);
+}
+.top h2{
+    position: absolute;
+    font-size: 45px;
+    color: white;
+    z-index: 1;
+    left: 40%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 20%;
+}
+.top p{
+    font-size: 25px;
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    left: 33%;
+    top: 50%;
+}
+body>p{
+    font-size: 20px;
+}
+.center{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 15%;
+}
+.num{
+    height: 70px;
+    width: 150px;
+    margin-top: 10%;
+}
+span{
+    font-size: 50px;
+}
+.line{
+    height: 5px;
+    width: auto;
+    background-color: #8b8b58;
+}
+.center p{
+    display: inline;
+    top: 15%;
+    font-size: 20px;
+}
+.and{
+    width: 60%;
+    height: 400px;
+}
+.picture{
+    height: 480px;
+    width: 50%;
+    margin-right: 5%;
+    border: 1px solid purple;
+    background-image: url(/images/kitchen\ dining\ interior.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+figure{
+    height:  400px;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 5%;
+}
+.pic{
+    border: 1px solid plum;
+    height: 350px;
+    width: 50%;
+    background-image: url(/images/garden.jpeg);
+    background-repeat: no-repeat;
+}
+.li{
+    height: 10px;
+    width: auto;
+    background-color: plum;
+    margin-bottom: 20px;
+}
+.adjust{
+    height: 300px;
+    width: 70%;
+    margin-top: 2%;
+}
+footer{
+    height: 300px;
+    width: 100%;
+    background-color: rgb(167, 32, 167);
+    display: flex;
+    justify-content: space-around;
+}
+.ul{
+    width: 40%;
+    display: flex;
+    margin-top: 4%;
+    position: relative;
+    gap: 20px;
+}
+.ul>ul{
+    margin-top: 55px;
+    margin-left: 30px;
+}
+ul li{
+    list-style-type: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+ul li:hover{
+    text-decoration: underline;
+}
+.ul p{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+.keep{
+    height: 200px;
+    width: 20%;
+    margin-top: 3%;
+    display: grid;
+    gap: 15px;
+}
+#fly{
+    display: none;
+}
+#name{
+    display: none;
+}
+.point{
+    height: 80px;
+    display: flex;
+    gap: 5px;
+}
+#circle{
+    height: 60px;
+    width: 60px;
+    border: 1px solid aquamarine;
+    border-radius: 50%;
+    margin-top: 10px;
+    background-color: aquamarine;
+}
+.keep p{
+   font-size: 20px;
+   color: #fff;
+   margin-left: 25px;
+   word-spacing: 5px;
+   margin-top: 10px;
+}
+#circle img{
+    height: 45px;
+    width: 45px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 650px){
+    body{
+        height: fit-content;
+        width: inherit;
+        margin: 0 auto;
+    }
+    nav{
+        top: 0;
+        height: 55px;
+        padding-left: 10px;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        padding-top: 50px;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        width: 70%;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 0 25% 25% 0;
+        background-color: rgba(0, 128, 128,0.4);
+    }
+    #name:checked ~ ul{
+        display: flex;
+    }
+    #fly{
+        display: block;
+        right: 12%;
+        position: absolute;
+    }
+    #name{
+        display: none;
+    }
+    .top{
+        height: 80%;
+        width: 100%;
+    }
+    .top h2{
+        font-size: 30px;
+        left: 35%;
+        top: 30%;
+    }
+    .top p{
+        font-size: 15px;
+        left: 30%;
+    }
+    body>p{
+        width: 100%;
+    }
+    .center{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 850px;
+        gap: 10px;
+        margin-left: 0;
+    }
+    .and{
+        height: 50%;
+        width: 98%;
+    }
+    .picture{
+        height: 70%;
+        width: 90%;
+    }
+    figure{
+        height: 850px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .adjust{
+        height: 450px;
+        width: 92%;
+    }
+    .pic{
+        height: 350px;
+        width: 85%;
+    }
+    footer{
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .point{
+        margin-left: 20px;
+    }
+}

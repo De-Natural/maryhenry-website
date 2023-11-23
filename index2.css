@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b53ff;
+}
+nav{
+    background-color: rgb(3, 4, 192, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    top: 8px;
+}
+ul{
+    list-style-position: inside;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+nav li a{
+    text-decoration: none;
+    cursor: pointer;
+}
+nav li a:hover{
+    background-color: palegreen;
+    color: white;
+    padding: 10px;
+}
+nav h2{
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 8px 6px 4px darkkhaki;
+}
+.dash{
+    background-color: blue;
+    height: 450px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+#click:checked ~ #form{
+    bottom: 0;
+    background-color: teal;
+}
+#click:checked ~ #form label{
+    color: white;
+}
+h1{
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    margin-bottom: 100px;
+    color: white;
+    transition: color 1s;
+}
+#click:checked + h1{
+    color: rgba(255, 255, 255,0.5);
+    cursor: not-allowed;
+}
+form{
+    height: 300px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 100px;
+}
+input{
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.check{
+    display: flex;
+    color: white;
+}
+span{
+    margin-left: 10px;
+    margin-top: 7px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+button{
+    height: 30px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 0.7;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#form{
+    height: 370px;
+    width: calc(100% + 120px);
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    z-index: 1;
+    bottom: -310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 1.5s;
+}
+label{
+    position: absolute;
+    top: 5%;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bold;
+}
+.small{
+    height: 200px;
+    width: 330px;
+    padding: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+/* #backward{
+    position: absolute;
+    top: 13%;
+    left: 10px;
+    cursor: pointer;
+}
+#backward:hover{
+    background-color: lightblue;
+}
+#forword{
+    position: absolute;
+    top: 13%;
+    right: 95%;
+    cursor: pointer;
+} */
+/* #forword:hover{
+    background-color: lightblue;
+} */
+#name{
+    display: none;
+}
+#fly{
+    display: none;
+}
+@media screen and (max-width: 650px){
+    body{
+        height: 100vh;
+    }
+    nav{
+        top: 0;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        padding-top: 50px;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        width: 70%;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 0 25% 25% 0;
+        background-color: rgba(0, 128, 128,0.5);
+    }
+    #name:checked ~ ul{
+        display: flex;
+    }
+    nav h2{
+        margin-left: 10%;
+    }
+    #fly{
+        display: block;
+        margin-left: 30%;
+        position: absolute;
+    }
+    
+    .dash{
+        height: 70%;
+        width: 80%;
+        margin: auto
+    }
+    form{
+        height: 70%;
+        width: 80%;
+    }
+    .small{
+        width: 75%;
+    }
+}
